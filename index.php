@@ -21,10 +21,10 @@
               
               // make a query 
               
-            $servername = "localhost";
-            $username = "wesmixon";
-            $password = "qwer1234";
-            $dbname = "tech_devices_app";
+            $servername = "us-cdbr-iron-east-05.cleardb.net";
+            $username = "bdb5384f6f52f0";
+            $password = "caeb83fc";
+            $dbname = "heroku_e85b7747a279cb7";
             
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -35,7 +35,7 @@
             }
             
             // make a query 
-            if($_GET['filter'] == "NAME"){
+            if($_GET['filter'] == "NAME" or $_GET['filter'] == ""){
                 $sql = "SELECT *  FROM `Device` ORDER BY `deviceName` " . $_GET['up'];
             }
             if($_GET['filter'] == "PRICE"){
